@@ -254,7 +254,9 @@ Setting mitigation policy for a process helps prevent an attacker from exploitin
 
 For maximum effectiveness, mitigation policies should be applied before or during process initialization. For example, setting the ASLR policy that enables forced relocation of images is effective only if it is applied before all of the images in a process have been loaded.
 
-ASLR mitigation policies cannot be made less restrictive after they have been applied. 
+Note:
+ASLR (ProcessASLRPolicy) mitigation policies cannot be made less restrictive after they have been applied.
+Extension point disable policy (ProcessExtensionPointDisablePolicy) mitigation polices cannot be made less restrictive after they have been applied
 
 To compile an application that uses this function, set _WIN32_WINNT &gt;= 0x0602. For more information, see <a href="https://docs.microsoft.com/windows/desktop/WinProg/using-the-windows-headers">Using the Windows Headers</a>.
 
